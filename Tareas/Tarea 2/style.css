@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('degradado.jpg');
+  }
+  
+  .caja-registro {
+    width: 450px;
+    background: #bbc0be85;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    
+  }
+  
+  .caja-registro h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #ffffffbb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #96badd;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .caja-registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .caja-registro a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .caja-registro a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .send-button {
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    border: 2px solid rgb(52, 89, 124);
+    color: white;
+    cursor: pointer; 
+    background: linear-gradient(to right, transparent 50%, rgb(52, 89, 124) 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+    display:inline-block;
+    text-align:center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+  .send-button:hover{
+    background-position: right;
+        color: white;
+        font-weight: 700;
+  }
+
+  
