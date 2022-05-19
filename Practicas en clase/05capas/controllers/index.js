@@ -1,5 +1,5 @@
 const Producto = require('./producto');
 
-module.export = {
+module.exports = {
     Producto,
 }
