@@ -9,7 +9,7 @@ const router = Router()
 router.get('/', obtenerProducto)
 router.get('/:id', check('id', 'Debe ser un ID de mongo válido').isMongoId(),
 validarCampos, 
-obtenerProducto)
+obtenerProductos)
 router.post('/', check('El nombre es obligatorio').not().isEmpty(), 
 validarCampos, 
 crearProducto)
