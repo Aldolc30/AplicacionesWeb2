@@ -9,10 +9,8 @@ const dbConnection = async ()=>{
 
     }catch (error) {
         console.log(error);
-        throw new Error("Erroe al conectarse a la base de datos");        
+        throw new Error("Error al conectarse a la base de datos");        
     } 
 }
 
-export{
-    dbConnection
-}
+export{dbConnection}

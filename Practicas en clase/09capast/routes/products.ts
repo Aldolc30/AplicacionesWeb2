@@ -6,10 +6,10 @@ import { validarCampos } from "../middlewares/validarCampos";
 const { crearProducto, obtenerProductos, obtenerProducto } = Producto
 const router = Router()
 
-router.get('/', obtenerProducto)
+router.get('/', obtenerProductos)
 router.get('/:id', check('id', 'Debe ser un ID de mongo válido').isMongoId(),
 validarCampos, 
-obtenerProductos)
+obtenerProducto)
 router.post('/', check('El nombre es obligatorio').not().isEmpty(), 
 validarCampos, 
 crearProducto)
