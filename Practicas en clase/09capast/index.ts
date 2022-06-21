@@ -20,3 +20,4 @@ server.listen();
 // })
 
 
+// docker run --name basedemongo -p 27017:27017 -d mongo
