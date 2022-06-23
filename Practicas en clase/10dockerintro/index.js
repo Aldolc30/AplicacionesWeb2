@@ -16,7 +16,7 @@ for(;;)
 /* Para la practica 11 ejecutar:
 npm install -g express-generator
 luego escribir
-express --view=hbs /tmp/foo && cd /tmp/foo
+express --view=hbs expressextoa
 
 y seguir los pasos que aprece◙ en consola
 
