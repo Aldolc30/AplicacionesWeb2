@@ -4,6 +4,7 @@ for(;;)
     console.log(contador++);
 }
 
+ 
 
 // docker build . -t pruebasextoa
 // docker run --name sextoacorriendo -d pruebasextoa
@@ -24,8 +25,8 @@ estando e la ruta ejecutar
 
 docker run -p 3000:3000 -v (ruta donde se encuentra el proyecto C:// expresssextoa:/var/www) -w "www" node npm start
  */
-
-
+// docker run -p 3000:3000 -v "D:/Users/HP/Documents/GitHub/AplicacionesWeb2/Practicas en clase/11dockervolumen/expressextoa":/var/www -w "/var/www" node npm start
+ // 
 /*
     En el ejemplo 3 en 05 capas se ejecuta docker-compose up --build
 
