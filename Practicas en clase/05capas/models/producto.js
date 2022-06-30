@@ -7,7 +7,9 @@ const ProductoSchema = Schema({
         unique: true
     },
     estado:{
-        type: Boolean
+        type: Boolean,
+        default: true,
+       required:true
     },
     precio:{
         type: Number,

@@ -23,26 +23,20 @@ const obtenerProducto = async (req, res = response) => {
     const producto = await Producto.findById(id);
     res.json(producto)
 }
-const crearProducto = async (req, res = response ) => {
-    // sacar el estado del body 
-    const { estado, ...body} = req.body;
-    try {
-        const productoExiste = await Producto.findOne({nombre:body.nombre});
-    if(productoExiste)
+const crearProducto = async (req,res )=>{
+    const {  estado,  ...body } =  req.body;
+
+    const productoExiste = await Producto.findOne({ nombre:body.nombre });
+    if (productoExiste)
     {
-        return res.status(400).send({
-            message: `El producto con ese nombre ya existe ${productoExiste.nombre}`
+        return res.status(400).json({
+            message:
+            `El producto con ese nombre ya existe ${productoExiste.nombre}`
         })
     }
-
     const producto = new Producto(body);
-    const productoNuevo = await producto.save();
+    const productoNuevo =  await producto.save();
     res.status(201).json(productoNuevo);
-    } catch (error) {
-        console.log(error);
-    }
-    // Se valida que no existe
-    
 
 }
 const actualizarProducto = async (req, res = response) => {
