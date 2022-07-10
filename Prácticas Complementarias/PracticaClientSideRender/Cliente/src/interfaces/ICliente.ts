@@ -1,10 +1,11 @@
 export interface IResCliente {
     total: Number;
-    clientes: Cliente[];
+    client: Cliente[];
 
 }
 
 export interface Cliente { 
+	_id?:String,
     nombre_cliente: String,
 	cedula: String,
 	edad: Number,
