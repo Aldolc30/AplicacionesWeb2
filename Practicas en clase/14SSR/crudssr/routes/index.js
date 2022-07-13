@@ -9,7 +9,7 @@ const httpAxios = axios.create({
 /* GET home page. */
 router.get('/', function(req, res, next) {
   httpAxios.get(`productos`).then(respuesta=>{
-    console.log(respuesta.data.productos);
+    //console.log(respuesta.data.productos);
     res.render('index', { productos: respuesta.data.productos });
   })
 });
@@ -17,14 +17,13 @@ router.get('/', function(req, res, next) {
 router.get('/producto/nuevo',(req, res,next)=>{
   res.render('productoForm',{})
 })
-router.get('/producto/modificar:id',(req, res,next)=>{
-  
-  httpAxios.get('productos/${req.params.id}').then(respuesta=>{
-    res.render('productoForm',{producto: respuesta.data})
+router.get('/producto/modificar/:id',(req, res,next)=>{
+  httpAxios.get(`productos/${req.params.id}`).then(respuesta=>{
+    res.render('productoForm', { producto: respuesta.data })
   })
 })
-router.get('/producto/eliminar:id',(req, res,next)=>{
-  httpAxios.delete('productos/${req.params.id}').then(respuesta=>{
+router.get('/producto/eliminar/:id',(req, res,next)=>{
+  httpAxios.delete(`productos/${req.params.id}`).then(respuesta=>{
     res.redirect('/')
   })
 })
